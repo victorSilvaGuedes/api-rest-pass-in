@@ -11,6 +11,8 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 - Crie as variáveis de ambiente como as que estão no arquivo de exemplo ".env.example"
 - No terminal digite: "npm run dev"
 - Pronto, o projeto estará rodando em http://localhost:2222/
+- No terminal digite: "npm run db:studio" para visualizar as tabelas e dados no banco de dados
+- No terminal digite: "npm run db:migrate" para fazer uma nova migrate no banco de dados, caso faça alguma alteração
 
 ## Documentação da API (Swagger)
 Para a documentação da API (rotas), acesse o link: http://localhost:2222/docs
