@@ -7,13 +7,13 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 
 ## Para iniciar o projeto localmente:
 - Clone o repositório
-- No terminal digite "npm install"
+- No terminal digite: "npm install"
 - Crie as variáveis de ambiente como as que estão no arquivo de exemplo ".env.example"
-- No terminal digite "npm run dev"
+- No terminal digite: "npm run dev"
 - Pronto, o projeto estará rodando em http://localhost:2222/
 
 ## Documentação da API (Swagger)
-Para a documentação da API, acesse o link: http://localhost:2222/docs
+Para a documentação da API (rotas), acesse o link: http://localhost:2222/docs
 
 ## Requisitos
 
