@@ -51,6 +51,7 @@ app.register(getAttendeeBadge)
 app.register(checkIn)
 app.register(getEventAttendees)
 
+// registrando o errorHandler (todos erros cairão aqui, e terão um tratamento)
 app.setErrorHandler(errorHandler)
 
 app

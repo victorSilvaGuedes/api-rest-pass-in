@@ -36,7 +36,9 @@ export async function getEventAttendees(app: FastifyInstance) {
       const { eventId } = request.params
       const { pageIndex, query } = request.query
 
+      // listagem de todos participantes que estão num evento específico
       const attendees = await prisma.attendee.findMany({
+        // se possui uma query (parâmetro de busca), pega os nomes dos participantes que contém o query
         where: query
           ? {
               eventId,
@@ -54,9 +56,11 @@ export async function getEventAttendees(app: FastifyInstance) {
             select: { createdAt: true },
           },
         },
+        // ordena decrescente pela data criada
         orderBy: {
           createdAt: 'desc',
         },
+        // lista somente 10 resultados por página
         take: 10,
         skip: pageIndex * 10,
       })

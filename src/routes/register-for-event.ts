@@ -43,6 +43,7 @@ export async function registerForEvent(app: FastifyInstance) {
         )
       }
 
+      // usa Promise.all para tratar mais de uma promisse, pegando qual o evento, e quantos participantes já estão naquele evento
       const [event, amountOfAttendeesForEvent] = await Promise.all([
         prisma.event.findUnique({
           where: {
@@ -55,6 +56,8 @@ export async function registerForEvent(app: FastifyInstance) {
           },
         }),
       ])
+      // valida se o evento possui um max de participantes, e se o total de participantes
+      // que já estão naquele evento é maior ou igual o max de participantes
       if (
         event?.maximumAttendees &&
         amountOfAttendeesForEvent >= event?.maximumAttendees
